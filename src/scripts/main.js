@@ -11,7 +11,9 @@ const targetImage = (e) => {
   if (target.tagName === 'IMG') {
     const link = target.closest('.list-item__link');
 
-    largeImg.src = link.href;
+    if (link) {
+      largeImg.src = link.href;
+    }
   }
 };
 
